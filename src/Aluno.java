@@ -1,8 +1,13 @@
+import java.util.NoSuchElementException;
+
 public class Aluno {
     private String name;
     private int idStudent;
 
     public Aluno(String name, int idStudent) {
+        if (name == null){
+            throw new NullPointerException("O nome não pode ser nulo");
+        }
         this.name = name;
         this.idStudent = idStudent;
     }
