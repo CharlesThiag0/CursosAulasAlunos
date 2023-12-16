@@ -1,3 +1,5 @@
+package br.com.academia.aluno;
+
 import java.util.NoSuchElementException;
 
 public class Aluno {
