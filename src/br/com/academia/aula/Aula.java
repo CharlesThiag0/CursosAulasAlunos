@@ -27,4 +27,5 @@ public class Aula implements Comparable<Aula>{
     public int compareTo(Aula o) {
         return this.description.compareTo(o.description);
     }
+
 }
