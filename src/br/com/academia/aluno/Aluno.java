@@ -1,6 +1,7 @@
 package br.com.academia.aluno;
 
 import java.util.NoSuchElementException;
+import java.util.Objects;
 
 public class Aluno {
     private String name;
@@ -32,4 +33,16 @@ public class Aluno {
                 ", idStudent = " + idStudent ;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Aluno aluno = (Aluno) o;
+        return idStudent == aluno.idStudent && Objects.equals(name, aluno.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, idStudent);
+    }
 }

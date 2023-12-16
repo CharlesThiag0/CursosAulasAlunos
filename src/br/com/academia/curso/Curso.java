@@ -56,10 +56,20 @@ public class Curso {
         return this.registrationStudent.get(numRegistration);
     }
 
+    public void classRoomAlphabetic(){
+        Collections.sort(aulas);
+        aulas.forEach(aula -> System.out.println(aula));
+    }
+
+    public void classRoomNum() {
+        aulas.sort(Comparator.comparing(Aula::getTime));
+        aulas.forEach(aula -> System.out.println(aula));
+    }
+
     @Override
     public String toString() {
-        return  "name='" + name + '\'' +
-                ", instructor='" + instructor + '\'';
+        return  "name = '" + name + '\'' +
+                ", instructor = '" + instructor + '\'';
     }
 
 }
